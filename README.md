@@ -168,7 +168,7 @@ pedidos-service/
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/pedidos-service.git
+   git clone https://github.com/TortugaDio/pedidos-service.git
    cd pedidos-service
    ```
 
