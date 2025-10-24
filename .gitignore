@@ -1,0 +1,89 @@
+############################################################
+# 🧱 JAVA / SPRING BOOT PROJECT - .gitignore
+# Compatible con: IntelliJ, VS Code, H2, MySQL, Maven
+############################################################
+
+########################
+# MAVEN
+########################
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+########################
+# IDEs
+########################
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Archivos temporales de editores
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+########################
+# LOGS
+########################
+*.log
+logs/
+spring.log
+
+########################
+# BASE DE DATOS
+########################
+# H2
+*.db
+*.trace.db
+# SQLite (por si se usa en pruebas locales)
+*.sqlite
+*.sqlite3
+
+########################
+# SISTEMA OPERATIVO
+########################
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+########################
+# BUILD TOOLS
+########################
+# Gradle (por si existe wrapper accidental)
+.gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+########################
+# OTRAS CONFIGURACIONES
+########################
+# Archivos de entorno / credenciales
+.env
+*.env
+*.properties.local
+*.yml.local
+*.yaml.local
+
+# Archivos de respaldo
+*.nib
+*.orig
+*.rej
