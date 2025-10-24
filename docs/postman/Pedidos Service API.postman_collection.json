@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "d5d04322-7d6b-42c5-92a8-60f3775faaae",
+		"name": "Pedidos Service API",
+		"description": "Colección de Postman para testing del microservicio de pedidos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12370701"
+	},
+	"item": [
+		{
+			"name": "Cargar Pedidos - Todos Válidos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "pedidos-validos.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pedidos/cargar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedidos",
+						"cargar"
+					]
+				},
+				"description": "Carga un archivo CSV con todos los pedidos válidos"
+			},
+			"response": []
+		},
+		{
+			"name": "Cargar Pedidos - Con Errores",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "pedidos-con-errores.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pedidos/cargar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedidos",
+						"cargar"
+					]
+				},
+				"description": "Carga un archivo CSV con pedidos que contienen errores de validación"
+			},
+			"response": []
+		},
+		{
+			"name": "Cargar Pedidos - Archivo Vacío",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pedidos/cargar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedidos",
+						"cargar"
+					]
+				},
+				"description": "Intenta cargar un archivo vacío - debe retornar error 400"
+			},
+			"response": []
+		},
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"actuator",
+						"health"
+					]
+				},
+				"description": "Verifica el estado de salud del servicio"
+			},
+			"response": []
+		}
+	]
+}
